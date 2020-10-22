@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.CoroutineScope
@@ -64,6 +65,7 @@ class FirstFragment : Fragment(), CoroutineScope {
             val fontPath = getDataPath(requireContext())
             val typeface = Typeface.createFromFile(fontPath)
             textView.typeface = typeface
+            Toast.makeText(requireContext(), "Done", Toast.LENGTH_SHORT).show()
         }
     }
 
